@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradiant Card</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color:rgb(211, 17, 17);
+  width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  width: 180px;
+  height: 140%;
+  background-image: linear-gradient(rgb(93, 21, 218),rgb(11, 237, 87));
+  box-shadow: 0 0 20px rgb(70, 69, 69);
+  position: absolute;
+  animation: spin 4s linear infinite;
+
+}
+.card::after {
+  position: absolute;
+  content: '';
+  inset: 10px;
+  background-color: rgb(187, 224, 235);
+  border-radius: 16px;
+}
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+   <img src="https://cdn.pixabay.com/photo/2024/02/20/06/47/ai-generated-8584768_1280.jpg" alt="">
+  </div>
+</body>
+</html>
